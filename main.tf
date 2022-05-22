@@ -3,7 +3,7 @@ locals {
 }
 module "workspaces" {
   source         = "flufi-io/workspace/tfc"
-  version        = "0.0.3"
+  version        = "0.0.7"
   for_each       = local.workspaces
   variables_file = "${path.module}/workspaces/${each.key}"
 

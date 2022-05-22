@@ -12,67 +12,26 @@ workspace:
     speculative_enabled: false
     terraform_version: 1.2.0
     secrets:
-        oauth_token_id: ENC[AES256_GCM,data:mVHEyQdMWhJT4DqoSNsXA0Kf7Q==,iv:AghuFbVBSqhkSsp8f0yVWEUlyKlDwQRChWWfq6yUhWs=,tag:8OSD/96hM96NE3dYJpwOkQ==,type:str]
+        oauth_token_id: ENC[AES256_GCM,data:2JbrrBfrWIQLjt6C0ThQCj4AQw==,iv:rfGkwi3Ww1vAH8JjnV01R89Sg+l6Db82/iGfZ6ugJBU=,tag:nc60Nz1bcCb2v7YTx6/UdA==,type:str]
 variables:
-    env:
-        ENVIRONMENT_VARIABLE: DUMMY_VALUE
-        ENVIRONMENT_VARIABLE_LIST: -item1 -item2
-        ENVIRONMENT_VARIABLE_MAP:
-            key1: value1
-            key2: value2
-    terraform:
-        terraform_variable: dummy_value
-        terraform_list:
-            - item1
-            - item2
-        terraform_map:
-            key1: value1
-            key2: value2
+    env: null
+    terraform: null
 secrets:
     env:
-        ENVIRONMENT_SCRET: ENC[AES256_GCM,data:vVdJ/iO7vIKCNDw=,iv:ef6/15fdp7OOHyrgtXu3CF8I3UZsotvfXPm+yyBN/OA=,tag:tTrvPFs+GUdXQ4oo27tX1g==,type:str]
-        ENVIRONMENT_SECRT_LIST:
-            - ENC[AES256_GCM,data:rO8XnVU=,iv:FIfG4YsprSSfqYdLOMyJfoceFEmdR1PhsR80rnqgrmI=,tag:r9ARD5IE2gXwkAv1IQcGiQ==,type:str]
-            - ENC[AES256_GCM,data:jTHSBk4=,iv:PHi7VmR84QVStw3mNnVsKhBy9hv7sAUhNDPrcyTdva4=,tag:ajTTl1Au0HQoW81tmShVWA==,type:str]
-        ENVIRONMENT_SCRT_MAP:
-            key1: ENC[AES256_GCM,data:8QDxynVE,iv:Lj7TkRNnV6EYzKRjU9vpMgiRlbYDrJKPQoCXe77wRR0=,tag:GKvv684KXDM7q6GMoJzUFw==,type:str]
-            key2: ENC[AES256_GCM,data:+/MQ0i4s,iv:SMScW86WhKLf5l4KWG0YSvOY1XwpSDVv+TP1wYt6YQE=,tag:oMvgcFT4yRgOtmOCv2Y8Pw==,type:str]
-    terraform:
-        terraform_scrt: ENC[AES256_GCM,data:qxXWAsEBYQfmD3Q=,iv:NpK3RygZkp1O5Y77f/czpOdxxxlLa58AebRxj8666p0=,tag:ZUsMlRQtPxsKT7R3weoyTg==,type:str]
-        scret_list:
-            - ENC[AES256_GCM,data:zF6KXnU=,iv:QGDL+vHxzaIGHClex2YUwZp7EUgdwzJFKbcMAZ2ud+Q=,tag:e8NheUgiE2fuAfY3HTowLw==,type:str]
-            - ENC[AES256_GCM,data:O0Y2rpc=,iv:O8CcGKbMipygfJa6rpgAdpOWhGNSu7MY5J5AT6IBeqk=,tag:eZyy1yA2dsTjVy05qiXiog==,type:str]
-        secrt_map:
-            key1: ENC[AES256_GCM,data:xNkmhIZU,iv:Qd5Hkr1cUYyzzBjear/q6/VKndgLkTgM4xNLxI/+iOM=,tag:p4SHt3rs1sZhWNy9cpyaHQ==,type:str]
-            key2: ENC[AES256_GCM,data:Zv6/CjFE,iv:8K0Aij2wOuTAH7x2WZjgxMwAqN3vN7LyH6DhSwIVimk=,tag:YR6dhJkGKQRx8ksmCN5tzg==,type:str]
+        TFE_TOKEN: ENC[AES256_GCM,data:Sq+1NYFCukVUcF1Tefxa7OseoN2MOo7HirLbo48Ash2JSyhLogGJo38TLnTSil6oAsAXXnHegsw/WveilcftT3xTa2IhBZvvBkJM9Y2srBWYqkLacugrbXTm,iv:fktJO+jMDFWSgM+ULLGrTe0z76YZ17/jWgCjVtr+lZ4=,tag:Ug/k1/Aq46zpEPNjTx1deg==,type:str]
+    terraform: null
 sops:
-    kms: []
+    kms:
+        - arn: arn:aws:kms:us-east-1:732758452413:alias/sops
+          created_at: "2022-05-22T14:05:53Z"
+          enc: AQICAHizmhgWE0khsmFsTYpSdml63F1DVW0UEOJKGdpnEsSbPAHmRG9DYVTJWr1Gxiv8Vi4oAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMIFQlXhvcJXNUPtYAAgEQgDuvCc3Ccn32FVbBY7ks2crl0p6Rybm3hHtIpxOSOJTMAudJoaoM3wgNN/UlftWyXxaWeaW67P23D6DEqw==
+          aws_profile: ""
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-05-22T08:39:20Z"
-    mac: ENC[AES256_GCM,data:jpxfpE+3ZYf1ZUzhYVlc+Dk+rJ5oKu995qxt5xk8CDL9Y21cNUCNyNaXyLwWkpkOKujDDQSNm3CeMoEWQIPz86mCiRCBqqNiuGb3xSvLJmNO0xyYjlk3zfEjerW/RyvQhB20Cdz3ZfNHfFYsVNNAYBNwJ5D9mj0NoEMkhsPX3jk=,iv:jYIYqGXQrUMNoV4c9AC5NDPl9b9XU47TxzBugfNJ5rc=,tag:oZcU4X2OYnq0FjT+atx6Kw==,type:str]
-    pgp:
-        - created_at: "2022-05-22T08:39:19Z"
-          enc: |
-            -----BEGIN PGP MESSAGE-----
-
-            hQIMA/7B7/1IH2nkAQ//R3MfLz1aOkElYWRbN4ic5JV3jmPfpuGHM2aHKQRPwerA
-            jdAYwFPnNPVTUubL1VmclMwNhuwSSdjNMh+mD0MZeNCDZA8HMcDr30hF8CPpdfpu
-            scu93f1wVU28ZzuXXinSRxcT8BnBWQtQIiMCHoldoS3N4AXOx1H+IsuBUE3uwQXS
-            jDRA1khdz05Z+9w8TQfa3qLrfqxcOPM/Kmzyg2ZTSvdu4WtlE429TFe88KE4VA2x
-            yfZHzCLka0ixRaT6ArmAgcQgpfnL/q5IqZ1X2I6wBZZPceQzQ2rJQVscdAZ1Rf6+
-            3IbLKNKU84q++wJTdzfuhqmiVbW+zPVkd+qXTLqZpMRy/5Kc+DBbEypp1snH2fHD
-            KU0CXQSpG74AbfZNocAx5xSMo1zK1Mjphj/xYid4LPgESU1kseCeCL1kWobJ/rTS
-            cttsaqfo7iHsJF1Korae8NLDEBHx9sGQPXp1frd09pUZ9dFDcnVzmoFHWum5W33Y
-            iumwC8QBirGCX8hxT5PBnvBWWRmdJCzsHAgRzu2RXHNxMA8CFbn/9pVuNwDB4lp2
-            N2N00PEH0SOfkUUSsXrzwFe2h/xjYYHIPTB+VZc62IwZLn3cDh0U+LGz/yPftw3E
-            3YvQWHbkHHcN8Li+ZC15rnIojCMrzYjrEgBLKEMFrGtiGWA3j0Ujos8pHctKfkrS
-            XgEXjrgrhwnBVWI9lrRdp85PRH1/lYmSt7UZdM4um4AXQvnm5c4t/Y4A4N4kfwlE
-            eGcGRRqjXJFb19sq3gbeKTipDfBEBBNgFPRD5ObJzCW51PLKItlHiPWrKkNTYIw=
-            =aMIk
-            -----END PGP MESSAGE-----
-          fp: AA9F55563CD4583F982F7FFDEC9D05544C76A668
+    lastmodified: "2022-05-22T14:05:54Z"
+    mac: ENC[AES256_GCM,data:5nsw83VDFykg0SL0N4CQgsW+9TwAtHPACV8MpU4BcKq0GFU3nDxIgh2bY8GSqO11PXznM3ybJXLpDlwYrkEO6Is2iI4zUrCia9T27BoEllmqx32xIwjc7kuUJMQT0CXX6VAlepHowsUEsIBZW/m4dmiGVRgUz/P+LG3zFAnR8FU=,iv:/101YE9QiXTDKMnmkexU7+t7HfEdUgFTm6h5ehyhGX4=,tag:wRzpfnRrQmIFCzjdN/58PQ==,type:str]
+    pgp: []
     encrypted_regex: ^(secrets|workspace.secrets)$
     version: 3.7.3
