@@ -1,0 +1,3 @@
+creation_rules:
+  - pgp: AA9F55563CD4583F982F7FFDEC9D05544C76A668
+    encrypted_regex: '^(secrets|workspace.secrets)$'
